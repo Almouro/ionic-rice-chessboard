@@ -1,0 +1,22 @@
+extends ./_layout.jade
+
+block content
+  ion-pane(ng-controller='MainController')
+    ion-header-bar.bar-stable
+      h1.title Theodo Test
+      .button.icon.ion-gear-b(ng-click='showParameters()')
+
+    ion-content(padding="true", scroll="false")
+      .parameters
+        div.padding-bottom
+          button.button.button-positive.button-full(type='button', ng-click='calculatePath()') Find Path
+        .result.padding-bottom {{total}}
+
+      - var tileSize = 40;
+      ion-scroll.grid.padding-top(direction="xy", zooming="true")
+        .scroll-container(style="{{'width: ' + (size.columns*#{tileSize} + 10) + 'px; height: ' + (size.rows*#{tileSize}+10) + 'px'}}")
+          map(data="map", incr="incrTileReact")
+          //- .row(ng-repeat='row in map')
+          //-   .tile(ng-repeat='col in row track by $index', ng-click='incrTile(row, $index)', ng-class="{'selected': col.selected}") {{col.value}}
+             //-.tile(ng-repeat='col in row track by $index', ng-click='incrTile(row, $index)',  ng-attr-id='{{$parent.$index+"_"+$index}}') {{col.value}}
+

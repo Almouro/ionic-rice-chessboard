@@ -1,0 +1,13 @@
+mixin incr-buttons($colsOrRows, $text)
+  label.item.item-input
+    span.input-label #{$text}
+    input.size-value(type='number', ng-change='changeSize()', ng-model='size.edit.#{$colsOrRows}', min='1', required="true", select-on-click)
+
+.list
+  +incr-buttons('rows', 'Rows')
+  +incr-buttons('columns', 'Columns')
+
+div
+  button.button.button-assertive.button-full(type='button', ng-click='resetMap()') Reset
+.padding-bottom
+  button.button.button-positive.button-full(type='button', ng-click='randomize()') Randomize

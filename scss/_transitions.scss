@@ -1,0 +1,14 @@
+@import 'www/lib/bourbon/dist/bourbon';
+
+@mixin fade-in($opacity1, $opacity2){
+  @include keyframes(fadeIn_#{$opacity1*100}_#{$opacity2*100}) {
+    from {
+      opacity: $opacity1;
+    }
+    to {
+      opacity: $opacity2;
+    }
+  }
+}
+
+@include fade-in(0,1);
