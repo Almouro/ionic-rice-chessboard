@@ -1,0 +1,42 @@
+@import 'transitions';
+
+.result{
+  text-align: center;
+  font-size: 3em;
+}
+
+.size-value{
+  text-align: right;
+  max-width: 75%;
+}
+
+.grid{
+  overflow: scroll;
+  white-space: nowrap;
+  @include calc(height, "100% - 120px");
+  //width: 100%;
+}
+
+.tile{
+  $col-height: 40px;
+  min-width: $col-height;
+  height: $col-height;
+  line-height: $col-height;
+  display: inline-block;
+  text-align: center;
+  font-size: 2em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tile.selected{
+  background-color: black;
+  color: white;
+  opacity: 0;
+  @include animation(fadeIn_0_100 0.7s ease);
+  @include animation-fill-mode(forwards);
+}
