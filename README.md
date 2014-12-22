@@ -1,5 +1,5 @@
-theodo-map-test
-===============
+Ionic rice chessboard
+=====================
 
 Used Jade, Sass (and CSS3 animations), Angular, Ionic.
 Added React with ngReact to improve rendering performance.
