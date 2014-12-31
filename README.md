@@ -5,7 +5,8 @@ This started with an algorithm I was asked to code during a code interview.
 
 ```
 A M*N chessboard is given, with a certain amount of rice on each tile.
-Find the best path from the top-left tile to the bottom-right, moving only to the right or bottom, to collect the highest amount of rice.
+Find the best path from the top-left tile to the bottom-right, moving only to the right or bottom, 
+to collect the highest amount of rice.
 ```
 
 After coding the algorithm, I wanted to visualize the path for a given map and decided to implement a visualization tool with <a href="https://angularjs.org/">Angular</a>, <a href="http://ionicframework.com/">Ionic</a>, <a href="http://jade-lang.com/">Jade</a>, <a href="http://sass-lang.com/">Sass</a> (and CSS3 animations).
